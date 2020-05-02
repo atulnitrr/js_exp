@@ -1,4 +1,5 @@
 var button = document.querySelector("button");
+var position = document.querySelector("h3");
 
 var count = 0;
 button.addEventListener("click", (event) => {
@@ -8,3 +9,7 @@ button.addEventListener("click", (event) => {
   document.title = `I was clicked ${count} times`;
 });
 console.log(button);
+
+window.addEventListener("mouseover", (event) => {
+  position.textContent = `X: ${event.pageX}, Y: ${event.pageY}`;
+});
